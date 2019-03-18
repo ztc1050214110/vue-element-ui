@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div>我是首页</div>
-    <home :nufd="nufd"></home>
+    <home :nufd="nufd" @fuclick="fuclick"></home>
     <button @click="click">点我触发方法请求数据</button>
     <button @click="skip">点我进入新页面</button>
   <ul>
@@ -14,7 +14,6 @@
 <script>
 import axios from "axios";
 import home from "./components/home";
-// import { constants } from 'http2';
 export default {
   name: "HelloWorld",
   data() {
@@ -22,7 +21,7 @@ export default {
       msg: "Welcome to Your Vue.js App",
       demas: "我是绑定的数据",
       ins:false,
-      nufd:100,
+      nufd:[],
     };
   },
   components:{
@@ -36,7 +35,7 @@ export default {
       axios
         .get("https://hi-prms.hld-yun.com/sue/Statisties/GetAlert", {
           params: {
-            token:"z2fXSwqkljdcVppt5BAnIUhXJ78m3ChhiROyALqRTke8xou_FNXqNg==.6iC5pe-4cYFrbwkDvycDOiW_rVLr5UEMCwuhZQPBJWB6DxVCuDWi25HkD00NwYgzYAg_pG03qr7bGJmSB1rpDQHUvWZiA0b4fCkYS1i3gMSpdZlLeGEbAKjjlAQ1r1OEg8QVqgXs-fJ32Gv0_FHOlNM8zhH_63eRHojqKesU3TG2FwueAvqvZVt1Cc-NSomL8rCv864Pg7WGQHVpnMkW8K9ADeDYhLHvcfSDeD_YCJSc2pLhs7H9KDE6qi-xKptcLN2lvWi6xjiKxpbXmVqQLDE6qi-xKptc4ib8zMLsn2oOHUGuilBVAeLyQyryQI1yqe9vR1e2E2j-usXAvHOpTbZqQJn_1iQA2MuBeov--_dMhlaQ_tBPZMxu27Nnvk6PRh_itEaMTob8EHvjVgZhb-ns6JIpaM198ICdK0pxhKovy6MMqFOg6mgwzg6-dB33a9rmwFzqs1p6M_Fga0rSvegen_CzqNQieYcJfbayoCjk8fGZCs-1VtC-89jorBuvh8bjbowDQTok519vBw23ERlqRlt4ywvcB8iaeYIrAEbgMBpXsUtyWw==.kh-hZMcO8k9rrtFFXl034BAyEg1tvfC8sqsYCLKNPhE=",
+            token:"z2fXSwqkljdcVppt5BAnIUhXJ78m3ChhiROyALqRTke8xou_FNXqNg==.6iC5pe-4cYGKBEf06G3OjFEcj0iJwZJ4IpzsTOu1Eyf5pvIoYnAbyZ-A0A0ZGcqGQZftRX_8-vDbGJmSB1rpDQHUvWZiA0b4fCkYS1i3gMSpdZlLeGEbAN7-GBhkdXTdCn00LZZ-sgjG5AYRbJ0OAdM8zhH_63eRHojqKesU3TG2FwueAvqvZVt1Cc-NSomL8rCv864Pg7UeWTMNhAvLWIdAXcFkZVrK8946W0wSyOSc2pLhs7H9KDE6qi-xKptcLN2lvWi6xjiKxpbXmVqQLDE6qi-xKptc4ib8zMLsn2oOHUGuilBVAeLyQyryQI1yqe9vR1e2E2j-usXAvHOpTbZqQJn_1iQA2MuBeov--_dMhlaQ_tBPZMSRKPsY5VAEMWIiHx8nOkj8EHvjVgZhb-ns6JIpaM198ICdK0pxhKovy6MMqFOg6mgwzg6-dB33a9rmwFzqs1p6M_Fga0rSvegen_CzqNQieYcJfbayoCjk8fGZCs-1VtC-89jorBuvh8bjbowDQTok519vBw23ERlqRlt4ywvcB8iaeYIrAEbgMBpXsUtyWw==.0PKIKyCowNAIG2tEnVvNwluWNfTf4eINe3QUj_dx-EU=",
             BookId: "",
             TerId: "",
             AmmId: "",
@@ -56,6 +55,7 @@ export default {
           console.log("后端数据");
           console.log(response.data.rowData);
           _this.demas = response.data.rowData;
+          _this.nufd = response.data.rowData
         })
         .catch(function(error) {
           console.log("请求失败");
@@ -64,6 +64,10 @@ export default {
     },
     skip() {
       this.$router.push("/newp");
+    },
+    fuclick(e){
+      console.log("父")
+      console.log(e)
     }
   }
 };
