@@ -68,6 +68,8 @@ export default {
     fuclick(e){
       console.log("父")
       console.log(e)
+      console.log("获取vuex的数据")
+      console.log(this.$store.state.showFooter)
     }
   }
 };
