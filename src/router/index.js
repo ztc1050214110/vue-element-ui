@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import hello from '@/components/hello'
+import home from '@/components/home'
 import newp from '@/components/newp'
 import amm from '@/components/amm'
 
@@ -10,8 +10,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'hello',
-      component: hello
+      name: 'home',
+      component: home
     },
     {
       path: '/newp',

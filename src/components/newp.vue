@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import home from './components/home'
+import home from './components/homeComp'
 export default {
   name: 'xxx',
   data () {

@@ -1,5 +1,6 @@
 <template>
 <div class="content">
+
     我是第一个组件
     <div class="div">{{nufd[0]}}
       <button @click="fu">子组件传递给父组件</button>
@@ -27,8 +28,5 @@ export default {
 </script>
 
 <style scoped>
-.div{
-  width: 100%;
-  background-color: aqua;
-}
+
 </style>
