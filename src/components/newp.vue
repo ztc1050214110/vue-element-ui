@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import home from './components/homeComp'
+import home from '../pages/homeBott'
 export default {
   name: 'xxx',
   data () {

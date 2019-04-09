@@ -29,6 +29,7 @@ li{
   text-align: center;
   line-height: 70px;
   color: #969595;
+  cursor: pointer;/*鼠标变成手指样式*/
 
 }
 .head_ul>li:hover{
@@ -59,6 +60,7 @@ li{
   line-height: 40px;
   text-align: center;
   color: #000;
+    cursor: pointer;/*鼠标变成手指样式*/
 }
 .but_click:hover{
   background-color: #e2e2e2;
@@ -67,7 +69,7 @@ li{
 .home_bigimg_box{
   width: 100%;
   height: 451px;
-  background: #ffffff;
+  background: #fbfbfb;
   position: absolute;
   bottom:0;
   display: flex;
@@ -104,6 +106,7 @@ align-items: center;
     line-height: 42px;
     position: absolute;
     bottom: 0;
+      cursor: pointer;/*鼠标变成手指样式*/
   }
   .home_bigimg_but:hover{
     background: #000000;
@@ -111,6 +114,7 @@ align-items: center;
   }
 </style>
 <template>
+
   <div class="">
        <div class="head_navigation">
              <img src="../img/main_logo.png" class="head_logo">
@@ -149,7 +153,6 @@ align-items: center;
 
 <script>
 import axios from "axios";
-import home from "./components/homeComp";
 export default {
   name: "HelloWorld",
   data() {
@@ -163,7 +166,6 @@ export default {
     };
   },
   components:{
-    home,
   },
   methods: {
     click() {
