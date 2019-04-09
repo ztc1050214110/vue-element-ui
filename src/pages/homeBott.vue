@@ -118,6 +118,21 @@ import { constants } from 'http2';
   background-image: url(../img/twitter-feed-bg.jpg);
   background-size: 100%;
 }
+.disp_fenx{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ align-items: center;
+}
+.swiper_txt{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  line-height: 50px;
+}
 </style>
 <template>
   <div class="content">
@@ -165,11 +180,26 @@ import { constants } from 'http2';
       </div>
     </div>
     <div class="carousel_background">
-      
+      <div class="swiper-container" style="height:100%">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide disp_fenx" v-for="item in 3">
+        <div class="swiper_txt">
+         <Icon type="logo-github" size="50"/>
+            <h3>free stock photos: 74 best sites to find Awesome free images</h3>
+            <p>@themewagon</p>
+            <p>2 days ago on Twitter.com</p>
+        </div>
+      </div>
+    </div>
+     <div class="swiper-button-prev swiper-button-white" style="margin-left:100px;"></div><!--左箭头-->
+    <div class="swiper-button-next swiper-button-white" style="margin-right:100px"></div><!--右箭头-->
+  </div>
     </div>
   </div>
 </template>
 <script>
+import Swiper from 'swiper'; 
+import 'swiper/dist/css/swiper.min.css';
 export default {
   name: "homeBott",
   data() {
@@ -228,6 +258,15 @@ export default {
   mounted() {
     console.log(this.ulArr);
     console.log(this.clampArr);
+     var mySwiper = new Swiper('.swiper-container', {
+        delay: 500,
+       autoplay:true,
+       loop:true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
   }
 };
 </script>
