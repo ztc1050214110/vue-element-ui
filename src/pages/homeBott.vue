@@ -131,6 +131,14 @@ import { constants } from 'http2';
   color: #ffffff;
   line-height: 50px;
 }
+.AFFORDABLE{
+  width: 100%;
+  height: 170px;
+  display: flex;
+  justify-content: center; 
+align-items: center; 
+flex-direction: column;
+}
 </style>
 <template>
   <div class="content">

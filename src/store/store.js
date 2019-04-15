@@ -22,7 +22,6 @@ let store = new Vuex.Store({
         getCityFn: state => {
             console.log("计算了一次")
             return state.city
-           
           },
     },
 

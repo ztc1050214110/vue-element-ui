@@ -116,15 +116,6 @@ align-items: center;
 <template>
 
   <div class="">
-       <div class="head_navigation">
-             <img src="../img/main_logo.png" class="head_logo" @click="logo">
-             <ul class="head_ul">
-               <li>HOME</li>
-               <li>PASRAM</li>
-               <li>SMMING</li>
-               <li>GPILM</li>
-             </ul>
-       </div>
        <div class="home_bigimg">
          <h1 style="position: absolute;top: 10%;">{{msg}}</h1>
          <p style="position: absolute;top: 20%;">{{Everything}}</p>
@@ -153,6 +144,7 @@ align-items: center;
 
 <script>
 import axios from "axios";
+
 export default {
   name: "HelloWorld",
   data() {

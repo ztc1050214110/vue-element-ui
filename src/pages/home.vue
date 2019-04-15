@@ -4,6 +4,7 @@
 <template>
 
   <div class="content">
+    <componentsHead></componentsHead>
     <homeTop></homeTop>
     <homeBott></homeBott>
   </div>
@@ -13,6 +14,7 @@
 import axios from "axios";
 import homeBott from "./homeBott";
 import homeTop from "./homeTop";
+import componentsHead from "../components/head";
 export default {
   name: "HelloWorld",
   data() {
@@ -28,6 +30,7 @@ export default {
   components:{
     homeTop,
     homeBott,
+    componentsHead,
   },
   methods: {
     click() {
