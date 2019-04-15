@@ -26,8 +26,7 @@ import { constants } from 'http2';
   flex-direction: column;
   justify-content: center;
   align-items: center;
-                  cursor: pointer;/*鼠标变成手指样式*/
-
+  cursor: pointer; /*鼠标变成手指样式*/
 }
 .circle {
   width: 90px;
@@ -85,11 +84,11 @@ import { constants } from 'http2';
 .clampLisi img {
   width: 100%;
   height: 74%;
-   cursor: pointer;/*鼠标变成手指样式*/
-                transition: all 0.6s;/*所有属性变化在0.6秒内执行动画*/
+  cursor: pointer; /*鼠标变成手指样式*/
+  transition: all 0.6s; /*所有属性变化在0.6秒内执行动画*/
 }
-.clampLisi img:hover{
-  transform: scale(1.4);/*鼠标放上之后元素变成1.4倍大小*/
+.clampLisi img:hover {
+  transform: scale(1.4); /*鼠标放上之后元素变成1.4倍大小*/
 }
 .clampLisi p:nth-child(2) {
   color: #474747;
@@ -109,23 +108,22 @@ import { constants } from 'http2';
   position: absolute;
   right: 0%;
   bottom: 12%;
-  cursor: pointer;/*鼠标变成手指样式*/
-
+  cursor: pointer; /*鼠标变成手指样式*/
 }
-.carousel_background{
+.carousel_background {
   width: 100%;
   height: 300px;
   background-image: url(../img/twitter-feed-bg.jpg);
   background-size: 100%;
 }
-.disp_fenx{
+.disp_fenx {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
- align-items: center;
+  align-items: center;
 }
-.swiper_txt{
+.swiper_txt {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -181,25 +179,27 @@ import { constants } from 'http2';
     </div>
     <div class="carousel_background">
       <div class="swiper-container" style="height:100%">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide disp_fenx" v-for="item in 3">
-        <div class="swiper_txt">
-         <Icon type="logo-github" size="50"/>
-            <h3>free stock photos: 74 best sites to find Awesome free images</h3>
-            <p>@themewagon</p>
-            <p>2 days ago on Twitter.com</p>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide disp_fenx" v-for="item in 3">
+            <div class="swiper_txt">
+              <Icon type="logo-github" size="50"/>
+              <h3>free stock photos: 74 best sites to find Awesome free images</h3>
+              <p>@themewagon</p>
+              <p>2 days ago on Twitter.com</p>
+            </div>
+          </div>
         </div>
+        <div class="swiper-button-prev swiper-button-white" style="margin-left:100px;"></div>
+        <!--左箭头-->
+        <div class="swiper-button-next swiper-button-white" style="margin-right:100px"></div>
+        <!--右箭头-->
       </div>
-    </div>
-     <div class="swiper-button-prev swiper-button-white" style="margin-left:100px;"></div><!--左箭头-->
-    <div class="swiper-button-next swiper-button-white" style="margin-right:100px"></div><!--右箭头-->
-  </div>
     </div>
   </div>
 </template>
 <script>
-import Swiper from 'swiper'; 
-import 'swiper/dist/css/swiper.min.css';
+import Swiper from "swiper";
+import "swiper/dist/css/swiper.min.css";
 export default {
   name: "homeBott",
   data() {
@@ -243,8 +243,8 @@ export default {
     };
   },
   methods: {
-    imgIndex (index) {
-        console.log("你点击的是第"+(index+1)+"幅图")
+    imgIndex(index) {
+      console.log("你点击的是第" + (index + 1) + "幅图");
     },
     immigration(index) {
       this.Icon = false;
@@ -258,15 +258,15 @@ export default {
   mounted() {
     console.log(this.ulArr);
     console.log(this.clampArr);
-     var mySwiper = new Swiper('.swiper-container', {
-        delay: 500,
-       autoplay:true,
-       loop:true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
+    var mySwiper = new Swiper(".swiper-container", {
+      delay: 500,
+      autoplay: true,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      }
+    });
   }
 };
 </script>

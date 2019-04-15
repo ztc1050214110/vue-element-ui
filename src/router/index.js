@@ -15,7 +15,7 @@ export default new Router({
       name: 'home',
       component: home,
       meta: {
-        title: '首页入口'
+        title: 'vue.js'
       }
     },
     {

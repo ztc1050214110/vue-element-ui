@@ -117,7 +117,7 @@ align-items: center;
 
   <div class="">
        <div class="head_navigation">
-             <img src="../img/main_logo.png" class="head_logo">
+             <img src="../img/main_logo.png" class="head_logo" @click="logo">
              <ul class="head_ul">
                <li>HOME</li>
                <li>PASRAM</li>
@@ -128,10 +128,10 @@ align-items: center;
        <div class="home_bigimg">
          <h1 style="position: absolute;top: 10%;">{{msg}}</h1>
          <p style="position: absolute;top: 20%;">{{Everything}}</p>
-         <div class="but_click" style="position: absolute;top: 30%;">{{Our}}</div>
+         <div class="but_click" style="position: absolute;top: 30%;" @click="calculate">{{Our}}</div>
          <div class="home_bigimg_box">
            <div class="home_bigimg_sma">
-             <img src="../img/intro.jpg" alt="">
+             <img src="../img/blog-item1.jpg" alt="">
              <div class="home_bigimg_sma_right">
                <h2>avada the best agency for ever</h2>
                <p class="home_bigimg_p"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ante ex, fermentum vel libero
@@ -168,6 +168,12 @@ export default {
   components:{
   },
   methods: {
+    logo () {
+       this.$store.commit("setCity", "点击了logo");
+    },
+    calculate () {
+          //  this.Our = this.$store.state.city
+    },
     click() {
       console.log("data里面的数据")
       this.ins =  !this.ins
@@ -209,6 +215,12 @@ export default {
       console.log("父")
       console.log(e)
     }
+  },
+    mounted() {
+    console.log("获取VUEX的数据")
+    console.log(this.$store.state.city)
+    this.$store.commit("setCity", "数据改变了");
+    this.Our = this.$store.getters.getCityFn
   }
 };
 </script>
