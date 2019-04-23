@@ -74,6 +74,10 @@ export default {
       console.log("父")
       console.log(e)
     }
+  },
+  mounted () {
+
+
   }
 };
 </script>

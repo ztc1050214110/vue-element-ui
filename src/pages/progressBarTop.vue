@@ -105,6 +105,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        &:hover{
+          background: #969595;
+        }
       }
     }
     p {
@@ -124,7 +127,6 @@
       height: 350px;
       position: relative;
       top: 0;
-  
     }
   }
 }
@@ -165,14 +167,14 @@
           <p>iaculis leo suscipit ultricies</p>
           <div class="borderX"></div>
           <div class="box">
-            <div
-              v-for="items,indexs in imgArr"
-              :id="items.id"
-              @mouseenter="immigration(indexs)"
-              @mouseleave="shift_come(indexs)"
-              :style="state? 'background: #ffffff;':'background: #000000;'"
-            >
-              <Icon :id="items.id" :type="items.icon" size="20"/>
+            <div>
+              <Icon type="ios-finger-print"  size="20" />
+            </div>
+            <div>
+              <Icon type="ios-color-palette-outline" id="1" size="20"/>
+            </div>
+            <div>
+              <Icon type="ios-flower-outline" id="2" size="20"/>
             </div>
           </div>
         </div>
@@ -204,18 +206,24 @@ export default {
           icon: "ios-flower-outline"
         }
       ],
-      state:true
+      state: true,
+      imgId: null,
+      iconType:'ios-finger-print'
     };
   },
   components: {},
   methods: {
     immigration(e) {
       console.log(e + "移入");
-      this.state = false
+      this.id = e;
+      this.state = false;
+      this.iconType='md-finger-print'
     },
     shift_come(e) {
       console.log(e + "移出");
-       this.state = true
+      this.id = "";
+      this.state = true;
+       this.iconType='ios-finger-print'
     }
   }
 };

@@ -12,17 +12,20 @@ Vue.use(VueWechatTitle)
 export default new Router({
   routes: [
     {
-      path: '/home',
+      path: '/',
       name: 'home',
       component: home,
       meta: {
-        title: 'vue.js'
+        title: '超级猕猴桃'
       }
     },
     {
-      path: '/',
+      path: '/progressBar',
       name: 'progressBar',
-      component: progressBar
+      component: progressBar,
+      meta: {
+        title: '超级水果茶'
+      }
     },
     {
       path: '/newp',

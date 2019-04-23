@@ -116,6 +116,9 @@ align-items: center;
 <template>
 
   <div class="">
+    <!-- 双向绑定 -->
+        <!-- <input type="text"  v-model="mode"/>
+         <div @click="bothway" >{{mode}}</div> -->
        <div class="home_bigimg">
          <h1 style="position: absolute;top: 10%;">{{msg}}</h1>
          <p style="position: absolute;top: 20%;">{{Everything}}</p>
@@ -138,7 +141,6 @@ align-items: center;
            </div>
          </div>
        </div>
-   
   </div>
 </template>
 
@@ -149,6 +151,7 @@ export default {
   name: "HelloWorld",
   data() {
     return {
+      mode:'双向绑定',
       msg: "Welcome to our avada agency",
       Everything: "Everything you need to have in order to build a stunning website",
       Our: "Our Works",
@@ -160,9 +163,10 @@ export default {
   components:{
   },
   methods: {
-    logo () {
-       this.$store.commit("setCity", "点击了logo");
-    },
+   bothway () {
+      console.log("绑定")
+      this.mode="绑定"
+   },
     calculate () {
           //  this.Our = this.$store.state.city
     },
@@ -211,8 +215,16 @@ export default {
     mounted() {
     console.log("获取VUEX的数据")
     console.log(this.$store.state.city)
-    this.$store.commit("setCity", "数据改变了");
+    // this.$store.commit("setCity", "vuex的数据");
     this.Our = this.$store.getters.getCityFn
+  },
+  //侦听器
+  watch:{
+    Our:function(){
+    console.log("data里面的数据改变了");
+    console.log(this.$store.getters.getCityFn)
+    this.Our = this.$store.getters.getCityFn
+}
   }
 };
 </script>
