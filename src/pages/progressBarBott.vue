@@ -61,6 +61,7 @@
     height: 100%;
   }
 }
+
 </style>
 <template>
   <div class="content">
@@ -95,7 +96,7 @@
     </div>
     <div class="carousel">
       <div>
-        <div class="swiper-container" style="height:100%;height:100%">
+        <div class="swiper-container" style="height:100%;height:100%" id="swiper4">
           <div class="swiper-wrapper">
             <div class="swiper-slide disp_fenx">
               <div class="swiper_txt">
@@ -161,11 +162,16 @@ export default {
   },
   mounted() {
     // 开启动态效果
-    this.timer = setInterval(this.get, 100);
-    var mySwiper = new Swiper(".swiper-container", {
-      delay: 500,
+    // this.timer = setInterval(this.get, 100);
+    var mySwiper = new Swiper("#swiper4", {
+      delay: 50,
       autoplay: true,
       loop: true,
+    effect : 'flip',
+  flipEffect: {
+    slideShadows : true,
+    limitRotation : true,
+  },
     });
   },
   beforeDestroy() {

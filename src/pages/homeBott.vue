@@ -201,6 +201,7 @@ flex-direction: column;
         <!--左箭头-->
         <div class="swiper-button-next swiper-button-white" style="margin-right:100px"></div>
         <!--右箭头-->
+          <div class="swiper-pagination"></div><!--分页器。如果放置在swiper-container外面，需要自定义样式。-->
       </div>
     </div>
   </div>
@@ -273,7 +274,10 @@ export default {
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev"
-      }
+      },
+      pagination: {
+    el: '.swiper-pagination',
+  },
     });
   }
 };

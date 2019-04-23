@@ -122,7 +122,7 @@
       padding-top: 20px;
       margin-bottom: 14px;
     }
-    img {
+    .img {
       width: 100%;
       height: 350px;
       position: relative;
@@ -159,8 +159,111 @@
       <h1>OUR DESIGNATION</h1>
     </div>
     <div class="personalInformation">
-      <div v-for="item,index in imgArr">
-        <img :src="item.img" alt="">
+      <!-- 第一份 -->
+      <div>
+         <div class="img">
+        <div class="swiper-container" style="height:100%;height:100%" id="swiper1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide disp_fenx">
+              <div class="swiper_txt">
+                <img src="../img/520.png" alt="" style="  width: 100%;height: 350px;"> 
+              </div>
+            </div>
+            <div class="swiper-slide disp_fenx">
+              <div class="swiper_txt">
+                <img src="../img/520.png" alt="" style="  width: 100%;height: 350px;"> 
+              </div>
+            </div>
+            <div class="swiper-slide disp_fenx">
+              <div class="swiper_txt">
+                <img src="../img/520.png" alt="" style="  width: 100%;height: 350px;"> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="parcel">
+          <h4>David Martin</h4>
+          <p>Phasellus sit amet tristique ligula. Donec</p>
+          <p>iaculis leo suscipit ultricies</p>
+          <div class="borderX"></div>
+          <div class="box">
+            <div>
+              <Icon type="ios-finger-print"  size="20" />
+            </div>
+            <div>
+              <Icon type="ios-color-palette-outline" id="1" size="20"/>
+            </div>
+            <div>
+              <Icon type="ios-flower-outline" id="2" size="20"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 第二份 -->
+      <div>
+         <div class="img">
+        <div class="swiper-container" style="height:100%;height:100%" id="swiper2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide disp_fenx">
+              <div class="swiper_txt">
+                <img src="http://img1.imgtn.bdimg.com/it/u=1481887723,3657687046&fm=26&gp=0.jpg" alt="" style="  width: 100%;height: 350px;"> 
+              </div>
+            </div>
+            <div class="swiper-slide disp_fenx">
+              <div class="swiper_txt">
+                <img src="http://img.zcool.cn/community/01ad395c714a4ba801213f2678ae27.jpg@260w_195h_1c_1e_1o_100sh.jpg" alt="" style="  width: 100%;height: 350px;"> 
+              </div>
+            </div>
+            <div class="swiper-slide disp_fenx">
+              <div class="swiper_txt">
+                <img src="http://img5.imgtn.bdimg.com/it/u=137063313,3433189430&fm=11&gp=0.jpg" alt="" style="  width: 100%;height: 350px;"> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="parcel">
+          <h4>David Martin</h4>
+          <p>Phasellus sit amet tristique ligula. Donec</p>
+          <p>iaculis leo suscipit ultricies</p>
+          <div class="borderX"></div>
+          <div class="box">
+            <div>
+              <Icon type="ios-finger-print"  size="20" />
+            </div>
+            <div>
+              <Icon type="ios-color-palette-outline" id="1" size="20"/>
+            </div>
+            <div>
+              <Icon type="ios-flower-outline" id="2" size="20"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 第三份 -->
+      <div>
+         <div class="img">
+        <div class="swiper-container" style="height:100%;height:100%" id="swiper3">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide disp_fenx">
+              <div class="swiper_txt">
+                <img src="../img/520.png" alt="" style="  width: 100%;height: 350px;"> 
+              </div>
+            </div>
+            <div class="swiper-slide disp_fenx">
+              <div class="swiper_txt">
+                <img src="../img/520.png" alt="" style="  width: 100%;height: 350px;"> 
+              </div>
+            </div>
+            <div class="swiper-slide disp_fenx">
+              <div class="swiper_txt">
+                <img src="../img/520.png" alt="" style="  width: 100%;height: 350px;"> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
         <div class="parcel">
           <h4>David Martin</h4>
           <p>Phasellus sit amet tristique ligula. Donec</p>
@@ -185,23 +288,25 @@
 
 <script>
 import axios from "axios";
+import Swiper from "swiper";
+import "swiper/dist/css/swiper.min.css";
 export default {
   name: "HelloWorld",
   data() {
     return {
       imgArr: [
         {
-          id: 0,
+          id: 'swiper1',
           img: require("../img/team-member1.jpg"),
           icon: "ios-finger-print"
         },
         {
-          id: 1,
+          id: 'swiper2',
           img: require("../img/team-member2.jpg"),
           icon: "ios-color-palette-outline"
         },
         {
-          id: 2,
+          id: 'swiper3',
           img: require("../img/team-member3.jpg"),
           icon: "ios-flower-outline"
         }
@@ -225,6 +330,51 @@ export default {
       this.state = true;
        this.iconType='ios-finger-print'
     }
+  },
+    mounted() {
+    // 开启动态效果
+    // this.timer = setInterval(this.get, 100);
+    var mySwiper = new Swiper("#swiper1", {
+      speed:2000,
+       autoplay: {
+    delay: 2000,
+    stopOnLastSlide: false,
+    disableOnInteraction: true,
+    },
+      loop: true,
+    effect : 'cube',
+  cubeEffect: {
+    slideShadows: true,
+    shadow: true,
+    shadowOffset: 100,
+    shadowScale: 0
+  },
+    });
+    var mySwiper = new Swiper("#swiper2", {
+      speed:2000,
+       autoplay: {
+    delay: 1000,
+    stopOnLastSlide: false,
+    disableOnInteraction: true,
+    },
+      loop: true,
+      effect : 'fade',
+
+    });
+    var mySwiper = new Swiper("#swiper3", {
+      speed:2000,
+       autoplay: {
+    delay: 2000,
+    stopOnLastSlide: false,
+    disableOnInteraction: true,
+    },
+      loop: true,
+   effect : 'flip',
+  flipEffect: {
+    slideShadows : true,
+    limitRotation : true,
   }
+    });
+  },
 };
 </script>
