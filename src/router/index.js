@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import home from '@/pages/home'
-import progressBar from '@/pages/progressBar'
+import home from '@/pages/home/home'
+import progressBar from '@/pages/progressBar/progressBar'
 import newp from '@/components/newp'
 import amm from '@/components/amm'
+import Layout from '@/pages/Layout/Layout'
 import VueWechatTitle from 'vue-wechat-title';
 
 Vue.use(Router)
@@ -17,6 +18,14 @@ export default new Router({
       component: home,
       meta: {
         title: '超级猕猴桃'
+      }
+    },
+    {
+      path: '/Layout',
+      name: 'Layout',
+      component: Layout,
+      meta: {
+        title: '响应式布局'
       }
     },
     {

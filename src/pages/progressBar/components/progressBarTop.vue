@@ -2,7 +2,7 @@
 .gray_background {
   width: 100%;
   height: 190px;
-  background-image: url(../img/about-bg.jpg);
+  background-image: url(../../../img/about-bg.jpg);
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -137,7 +137,7 @@
       <div class="shade"></div>
       <div class="return">
         <a href="#">HOME</a>
-        <img src="../img/daas22.png" alt="">
+        <img src="../../../img/daas22.png" alt="">
         <a href="#">ABOUT US</a>
       </div>
     </div>
@@ -166,17 +166,17 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide disp_fenx">
               <div class="swiper_txt">
-                <img src="../img/520.png" alt="" style="  width: 100%;height: 350px;"> 
+                <img src="../../../img/520.png" alt="" style="  width: 100%;height: 350px;"> 
               </div>
             </div>
             <div class="swiper-slide disp_fenx">
               <div class="swiper_txt">
-                <img src="../img/520.png" alt="" style="  width: 100%;height: 350px;"> 
+                <img src="../../../img/520.png" alt="" style="  width: 100%;height: 350px;"> 
               </div>
             </div>
             <div class="swiper-slide disp_fenx">
               <div class="swiper_txt">
-                <img src="../img/520.png" alt="" style="  width: 100%;height: 350px;"> 
+                <img src="../../../img/520.png" alt="" style="  width: 100%;height: 350px;"> 
               </div>
             </div>
           </div>
@@ -248,17 +248,17 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide disp_fenx">
               <div class="swiper_txt">
-                <img src="../img/520.png" alt="" style="  width: 100%;height: 350px;"> 
+                <img src="../../../img/520.png" alt="" style="  width: 100%;height: 350px;"> 
               </div>
             </div>
             <div class="swiper-slide disp_fenx">
               <div class="swiper_txt">
-                <img src="../img/520.png" alt="" style="  width: 100%;height: 350px;"> 
+                <img src="../../../img/520.png" alt="" style="  width: 100%;height: 350px;"> 
               </div>
             </div>
             <div class="swiper-slide disp_fenx">
               <div class="swiper_txt">
-                <img src="../img/520.png" alt="" style="  width: 100%;height: 350px;"> 
+                <img src="../../../img/520.png" alt="" style="  width: 100%;height: 350px;"> 
               </div>
             </div>
           </div>
@@ -297,17 +297,17 @@ export default {
       imgArr: [
         {
           id: 'swiper1',
-          img: require("../img/team-member1.jpg"),
+          img: require("../../../img/team-member1.jpg"),
           icon: "ios-finger-print"
         },
         {
           id: 'swiper2',
-          img: require("../img/team-member2.jpg"),
+          img: require("../../../img/team-member2.jpg"),
           icon: "ios-color-palette-outline"
         },
         {
           id: 'swiper3',
-          img: require("../img/team-member3.jpg"),
+          img: require("../../../img/team-member3.jpg"),
           icon: "ios-flower-outline"
         }
       ],

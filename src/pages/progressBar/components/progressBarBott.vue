@@ -100,16 +100,16 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide disp_fenx">
               <div class="swiper_txt">
-                <img src="../img/sponsor1.png" alt="">
-                <img src="../img/sponsor2.png" alt="">
-                <img src="../img/sponsor3.png" alt="">
+                <img src="../../../img/sponsor1.png" alt="">
+                <img src="../../../img/sponsor2.png" alt="">
+                <img src="../../../img/sponsor3.png" alt="">
               </div>
             </div>
             <div class="swiper-slide disp_fenx">
               <div class="swiper_txt">
-                <img src="../img/sponsor4.png" alt="">
-                <img src="../img/sponsor5.png" alt="">
-                <img src="../img/sponsor6.png" alt="">
+                <img src="../../../img/sponsor4.png" alt="">
+                <img src="../../../img/sponsor5.png" alt="">
+                <img src="../../../img/sponsor6.png" alt="">
               </div>
             </div>
           </div>

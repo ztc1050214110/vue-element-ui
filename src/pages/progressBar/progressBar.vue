@@ -10,9 +10,9 @@
 
 <script>
 import axios from "axios";
-import top from "./progressBarTop";
-import bott from "./progressBarBott";
-import componentsHead from "../components/head";
+import top from "./components/progressBarTop";
+import bott from "./components/progressBarBott";
+import componentsHead from "../../components/head";
 
 export default {
   name: "HelloWorld",

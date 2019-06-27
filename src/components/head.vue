@@ -42,7 +42,7 @@ li {
       <ul class="head_ul">
         <li @click="home">HOME</li>
         <li @click="pasram">PASRAM</li>
-        <li>SMMING</li>
+        <li @click="Layout">SMMING</li>
         <li>GPILM</li>
       </ul>
     </div>
@@ -73,6 +73,15 @@ export default {
       console.log("跳转到超级水果茶")
       this.$router.push({
         name:'progressBar',
+        params:{
+          id:'886'
+        }
+        });
+    },
+    Layout () {
+      console.log("跳转到超级水果茶")
+      this.$router.push({
+        name:'Layout',
         params:{
           id:'886'
         }

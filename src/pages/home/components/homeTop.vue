@@ -39,7 +39,7 @@ li{
 .home_bigimg{
   width: 100%;
   height: 820px;
-  background-image: url(../img/slider1.jpg);
+  background-image: url(../../../img/slider1.jpg);
   background-size: 100%;
   background-attachment: fixed;
   display: flex;
@@ -125,7 +125,7 @@ align-items: center;
          <div class="but_click" style="position: absolute;top: 30%;" @click="calculate">{{Our}}</div>
          <div class="home_bigimg_box">
            <div class="home_bigimg_sma">
-             <img src="../img/blog-item1.jpg" alt="">
+             <img src="../../../img/blog-item1.jpg" alt="">
              <div class="home_bigimg_sma_right">
                <h2>avada the best agency for ever</h2>
                <p class="home_bigimg_p"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ante ex, fermentum vel libero
