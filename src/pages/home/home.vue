@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import { WOW } from 'wowjs'
 import axios from "axios";
 import homeTop from "./components/homeTop";
 import homeBott from "./components/homeBott";
@@ -75,7 +76,15 @@ export default {
       console.log(e);
     }
   },
-  mounted() {}
+  mounted() {
+    var wow = new WOW({
+boxClass: 'wow',
+animateClass: 'animated',
+offset: 0,
+mobile: true
+})
+wow.init();
+  }
 };
 </script>
 

@@ -148,8 +148,8 @@
       <ul class="four_listBox">
         <!-- for循环动态加载class -->
         <li v-for="(item,index) in ulArr" :data-index="index" @mouseenter="immigration(index)" @mouseleave="shift_come(index)">
-          <div :class="itemID == index ? 'circle':'circle_immigration'">
-            <Icon :type="item.type" size="55" :color="itemID == index? '#fff':'#000'" />
+          <div :class="itemID == index ? 'circle':'circle_immigration wow slideInDown'">
+            <Icon :type="item.type" size="55" class="" :color="itemID == index? '#fff':'#000'" />
           </div>
           <h3>{{item.Responsive}}</h3>
           <p>Class aptent taciti sociosqu ad litora</p>

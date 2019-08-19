@@ -5,6 +5,7 @@ import progressBar from '@/pages/progressBar/progressBar'
 import newp from '@/components/newp'
 import amm from '@/components/amm'
 import Layout from '@/pages/Layout/Layout'
+import married from '@/pages/married/married'
 import VueWechatTitle from 'vue-wechat-title';
 
 Vue.use(Router)
@@ -13,9 +14,17 @@ Vue.use(VueWechatTitle)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/home',
       name: 'home',
       component: home,
+      meta: {
+        title: '超级猕猴桃'
+      }
+    },
+    {
+      path: '/',
+      name: 'married',
+      component: married,
       meta: {
         title: '超级猕猴桃'
       }
