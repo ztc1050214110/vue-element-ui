@@ -50,8 +50,8 @@ screenWidth(val){
   /* text-align: center; */
   color: #2c3e50;
   /* margin-top: 60px; */
-  min-width: 1400px;
-  min-height: 900px;
+  /* min-width: 1400px;
+  min-height: 900px; */
 }
 * {
   margin: 0;

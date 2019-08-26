@@ -14,6 +14,8 @@ import 'animate.css'
 Vue.use(ElementUI);
 Vue.use(iView);
 Vue.use(VueAxios,axios);
+// 引入mockjs
+require('./mock.js')
 
 Vue.config.productionTip = false
 

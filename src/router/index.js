@@ -14,7 +14,7 @@ Vue.use(VueWechatTitle)
 export default new Router({
   routes: [
     {
-      path: '/home',
+      path: '/',
       name: 'home',
       component: home,
       meta: {
@@ -22,11 +22,11 @@ export default new Router({
       }
     },
     {
-      path: '/',
+      path: '/married',
       name: 'married',
       component: married,
       meta: {
-        title: '超级猕猴桃'
+        title: '去哪儿(移动端)'
       }
     },
     {

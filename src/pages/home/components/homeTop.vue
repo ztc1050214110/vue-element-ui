@@ -146,6 +146,7 @@ align-items: center;
 
 <script>
 import axios from "axios";
+import api from "../../../axios/api";
 
 export default {
   name: "HelloWorld",
@@ -158,6 +159,7 @@ export default {
       demas: "我是绑定的数据",
       ins:false,
       nufd:[],
+      newsListShow:"",
     };
   },
   components:{
@@ -169,6 +171,11 @@ export default {
    },
     calculate () {
           //  this.Our = this.$store.state.city
+           api.JH_news('/news/index', 'type=top&key=123456')
+      .then(res => {
+        console.log(res);
+        this.newsListShow = res.articles;
+      });
     },
     click() {
       console.log("data里面的数据")

@@ -43,7 +43,7 @@ li {
         <li @click="home">HOME</li>
         <li @click="pasram">PASRAM</li>
         <li @click="Layout">SMMING</li>
-        <li>GPILM</li>
+        <li @click="married">GPILM</li>
       </ul>
     </div>
   </div>
@@ -82,6 +82,15 @@ export default {
       console.log("跳转到超级水果茶")
       this.$router.push({
         name:'Layout',
+        params:{
+          id:'886'
+        }
+        });
+    },
+    married () {
+      console.log("跳转到超级水果茶")
+      this.$router.push({
+        name:'married',
         params:{
           id:'886'
         }
