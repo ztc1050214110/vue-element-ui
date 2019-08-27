@@ -2,8 +2,13 @@
 </style>
 <template>
   <div class="content">
+    <button @click="click_vuex">点击获取vuex数据</button>
+    vuex:{{vuex_data}}
+    <button @click="modification_vuex">点击修改vuex数据</button>
+    vuex:{{vuex_data}}
     <componentsHead></componentsHead>
-    <homeTop></homeTop>
+    {{son}}
+    <homeTop :parameter="parameter" @showCityName="showCityName"></homeTop>
     <homeBott></homeBott>
   </div>
 </template>
@@ -25,6 +30,9 @@ export default {
       demas: "我是绑定的数据",
       ins: false,
       nufd: [],
+      parameter:'父组件的参数~~~~~~~~~~~~~~~~~~!!!!!!!!!!',
+      son:'',
+      vuex_data:'',
     };
   },
   components: {
@@ -33,6 +41,19 @@ export default {
     componentsHead
   },
   methods: {
+    modification_vuex (){
+      console.log("修改vuex的数据")
+     this.$store.commit("modificationData", 'vuex的数据已经修改');
+    },
+    click_vuex () {
+      console.log("获取vuex数据")
+       this.vuex_data = this.$store.getters.getdata;
+    },
+    showCityName (e) {
+      console.log("子组件通信成功")
+      console.log(e)
+      this.son = e
+    },
     click() {
       console.log("data里面的数据");
       this.ins = !this.ins;

@@ -7,7 +7,8 @@ let store = new Vuex.Store({
        //获取vuex里面的值
     // self.areaName = this.$store.state.city;
     state:{
-        city:"Vuex"
+        city:"Vuex",
+        shareData:'vuex的数据~~~~~~~~~~~~~~~~'
     },
 
 
@@ -22,6 +23,10 @@ let store = new Vuex.Store({
         getCityFn: state => {
             console.log("计算了一次")
             return state.city
+          },
+        getdata(state) {
+            console.log("计算了一次22222")
+            return state.shareData
           },
     },
 
@@ -50,11 +55,16 @@ let store = new Vuex.Store({
     // 4. mutations 
     //修改vuex里面的值
    // this.$store.commit("setCity", self.areas[index].BookName);
+   //修改数据后，不会自动刷新，需要重新获取
     mutations:{
         // state指的是state的数据
         // name传递过来的数据
         setCity: (state, name) =>{
             state.city = name;//将传参设置给state的city
+        },
+        modificationData (state,modifier) {
+            console.log("进入了修改")
+            state.shareData = modifier
         }
     }
 });

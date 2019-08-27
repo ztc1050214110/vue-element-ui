@@ -116,13 +116,14 @@ align-items: center;
 <template>
 
   <div class="">
+    {{parameter+1}}
     <!-- 双向绑定 -->
         <!-- <input type="text"  v-model="mode"/>
          <div @click="bothway" >{{mode}}</div> -->
        <div class="home_bigimg">
          <h1 style="position: absolute;top: 10%;">{{msg}}</h1>
          <p style="position: absolute;top: 20%;">{{Everything}}</p>
-         <div class="but_click" style="position: absolute;top: 30%;" @click="calculate">{{Our}}</div>
+         <div class="but_click" style="position: absolute;top: 30%;" @click="calculate">{{Our+'子组件点击后传参'}}</div>
          <div class="home_bigimg_box">
            <div class="home_bigimg_sma">
              <img src="../../../img/blog-item1.jpg" alt="">
@@ -156,13 +157,15 @@ export default {
       msg: "Welcome to our avada agency",
       Everything: "Everything you need to have in order to build a stunning website",
       Our: "Our Works",
-      demas: "我是绑定的数据",
+      demas: "子组件传递过来的数据~~~~~~~~~~~~~~",
       ins:false,
       nufd:[],
-      newsListShow:"",
     };
   },
   components:{
+  },
+  props:{
+    parameter:String
   },
   methods: {
    bothway () {
@@ -176,6 +179,7 @@ export default {
         console.log(res);
         this.newsListShow = res.articles;
       });
+      this.$emit('showCityName',this.demas)
     },
     click() {
       console.log("data里面的数据")
