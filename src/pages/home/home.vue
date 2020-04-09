@@ -14,11 +14,12 @@
 </template>
 
 <script>
-import { WOW } from 'wowjs'
+import { WOW } from "wowjs";
 import axios from "axios";
 import homeTop from "./components/homeTop";
 import homeBott from "./components/homeBott";
 import componentsHead from "../../components/head";
+// import { constants } from 'http2';
 export default {
   name: "HelloWorld",
   data() {
@@ -30,9 +31,9 @@ export default {
       demas: "我是绑定的数据",
       ins: false,
       nufd: [],
-      parameter:'父组件的参数~~~~~~~~~~~~~~~~~~!!!!!!!!!!',
-      son:'',
-      vuex_data:'',
+      parameter: "父组件的参数~~~~~~~~~~~~~~~~~~!!!!!!!!!!",
+      son: "",
+      vuex_data: ""
     };
   },
   components: {
@@ -41,18 +42,18 @@ export default {
     componentsHead
   },
   methods: {
-    modification_vuex (){
-      console.log("修改vuex的数据")
-     this.$store.commit("modificationData", 'vuex的数据已经修改');
+    modification_vuex() {
+      console.log("修改vuex的数据");
+      this.$store.commit("modificationData", "vuex的数据已经修改");
     },
-    click_vuex () {
-      console.log("获取vuex数据")
-       this.vuex_data = this.$store.getters.getdata;
+    click_vuex() {
+      console.log("获取vuex数据");
+      this.vuex_data = this.$store.getters.getdata;
     },
-    showCityName (e) {
-      console.log("子组件通信成功")
-      console.log(e)
-      this.son = e
+    showCityName(e) {
+      console.log("子组件通信成功");
+      console.log(e);
+      this.son = e;
     },
     click() {
       console.log("data里面的数据");
@@ -98,13 +99,28 @@ export default {
     }
   },
   mounted() {
-    var wow = new WOW({
-boxClass: 'wow',
-animateClass: 'animated',
-offset: 0,
-mobile: true
+      console.log("~~~~~~~~打印打印打印打印打印打印~~~~~~~~~~");
+    // 解构赋值
+    // let A = "123";
+    // let B = "456";
+    // [A, B] = [B, A];
+  
+    // console.log(A);
+    // console.log(B);
+    //箭头函数
+let box = a =>({
+  data:a
 })
-wow.init();
+   
+ console.log(box(100))
+    return;
+    var wow = new WOW({
+      boxClass: "wow",
+      animateClass: "animated",
+      offset: 0,
+      mobile: true
+    });
+    wow.init();
   }
 };
 </script>

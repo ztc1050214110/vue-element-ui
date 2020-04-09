@@ -1,5 +1,9 @@
 <style scoped>
-
+@media only screen and (max-width: 500px) {
+    .head_navigation {
+        background-color: #000;
+    }
+}
 .head_navigation{
   width: 100%;
   height: 70px;
@@ -174,7 +178,8 @@ export default {
    },
     calculate () {
           //  this.Our = this.$store.state.city
-           api.JH_news('/news/index', 'type=top&key=123456')
+           api.JH_news('/news/index', 
+           'type=top&key=123456')
       .then(res => {
         console.log(res);
         this.newsListShow = res.articles;
@@ -185,8 +190,7 @@ export default {
       console.log("data里面的数据")
       this.ins =  !this.ins
       var _this = this;
-      axios
-        .get("https://hi-prms.hld-yun.com/sue/Statisties/GetAlert", {
+      axios.get("https://hi-prms.hld-yun.com/sue/Statisties/GetAlert", {
           params: {
             token:"z2fXSwqkljdcVppt5BAnIUhXJ78m3ChhiROyALqRTke8xou_FNXqNg==.6iC5pe-4cYGKBEf06G3OjFEcj0iJwZJ4IpzsTOu1Eyf5pvIoYnAbyZ-A0A0ZGcqGQZftRX_8-vDbGJmSB1rpDQHUvWZiA0b4fCkYS1i3gMSpdZlLeGEbAN7-GBhkdXTdCn00LZZ-sgjG5AYRbJ0OAdM8zhH_63eRHojqKesU3TG2FwueAvqvZVt1Cc-NSomL8rCv864Pg7UeWTMNhAvLWIdAXcFkZVrK8946W0wSyOSc2pLhs7H9KDE6qi-xKptcLN2lvWi6xjiKxpbXmVqQLDE6qi-xKptc4ib8zMLsn2oOHUGuilBVAeLyQyryQI1yqe9vR1e2E2j-usXAvHOpTbZqQJn_1iQA2MuBeov--_dMhlaQ_tBPZMSRKPsY5VAEMWIiHx8nOkj8EHvjVgZhb-ns6JIpaM198ICdK0pxhKovy6MMqFOg6mgwzg6-dB33a9rmwFzqs1p6M_Fga0rSvegen_CzqNQieYcJfbayoCjk8fGZCs-1VtC-89jorBuvh8bjbowDQTok519vBw23ERlqRlt4ywvcB8iaeYIrAEbgMBpXsUtyWw==.0PKIKyCowNAIG2tEnVvNwluWNfTf4eINe3QUj_dx-EU=",
             BookId: "",

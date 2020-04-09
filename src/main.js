@@ -6,11 +6,12 @@ import router from './router'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import iView from 'iview';
-import 'iview/dist/styles/iview.css';
+// import 'iview/dist/styles/iview.css';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import store from './store/store.js';
 import 'animate.css'
+import './reset.css'
 Vue.use(ElementUI);
 Vue.use(iView);
 Vue.use(VueAxios,axios);

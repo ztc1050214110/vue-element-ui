@@ -1,4 +1,7 @@
 <style scoped>
+.content{
+ min-width: auto !important;
+}
 </style>
 <template>
 <div class="content">
