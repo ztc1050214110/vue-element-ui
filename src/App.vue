@@ -45,6 +45,7 @@ export default {
   /* margin-top: 60px;  */
   /* min-width: 500px;
   min-height: 750px; */
+  min-width: 480px;
 }
 
 </style>
