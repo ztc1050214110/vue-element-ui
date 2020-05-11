@@ -8,6 +8,7 @@ import Layout from '@/pages/Layout/Layout'
 import everyday from '@/pages/everyday/everyday'
 import married from '@/pages/married/married'
 import licaibao from '@/pages/licaibao/licaibao'
+import test from '@/pages/test/test'
 import VueWechatTitle from 'vue-wechat-title';
 
 Vue.use(Router)
@@ -18,6 +19,14 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'test',
+      component: test,
+      meta: {
+        title: 'vue生命周期学习'
+      }
+    },
+    {
+      path: '/licaibao',
       name: 'licaibao',
       component: licaibao,
       meta: {

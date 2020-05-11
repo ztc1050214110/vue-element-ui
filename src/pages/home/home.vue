@@ -41,6 +41,15 @@ export default {
     homeBott,
     componentsHead
   },
+  computed:{
+    vuex_data(){
+      console.log("计算了")
+      console.log("计算了")
+      console.log("计算了")
+      console.log("计算了")
+      console.log("计算了")
+    }
+  },
   methods: {
     modification_vuex() {
       console.log("修改vuex的数据");

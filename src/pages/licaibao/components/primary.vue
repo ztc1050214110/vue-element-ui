@@ -231,7 +231,7 @@
   }
   .money {
     font-size: 0.1rem;
-    padding: 0 2.5rem;
+    padding: 0 2rem;
   }
   .money_left {
     width: 80%;
@@ -369,6 +369,7 @@ border: 0px;
     display: none;
   }
 }
+
 //响应式代码结束
 </style>
 <template>
@@ -464,8 +465,8 @@ export default {
     return {
       swiperImg: [
         require("../img/ad001-l.png"),
-        require("../img/ad002-l.png"),
-        require("../img/ad003-l.png")
+        require("../img/ad001-l.png"),
+        require("../img/ad001-l.png")
       ]
     };
   },

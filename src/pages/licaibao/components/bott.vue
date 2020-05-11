@@ -65,6 +65,44 @@ align-items: center;
         font-size: .75rem;
         margin-top: .8rem;
     }
+    //响应式代码开始
+//大型显示器
+@media screen and (max-width: 1280px) {
+
+}
+//中型显示器
+@media screen and (min-width: 481px) and (max-width: 1280px) {
+.About>img{
+    display: none;
+}
+.list{
+    width: 100%;
+    margin-left: 0%;
+    justify-content: space-around;
+    .item{
+        width: 18%;
+        padding-left: 5%;
+        box-sizing: border-box;
+    }
+}
+}
+//小型显示器
+@media screen and (max-width: 480px) {
+  .About>img{
+    display: none;
+}
+.list{
+    width: 100%;
+    margin-left: 0%;
+    justify-content: space-around;
+    .item{
+        width: 18%;
+              padding-left: 5%;
+        box-sizing: border-box;
+    }
+}
+}
+//响应式代码结束
 </style>
 <template>
     <div class="content">

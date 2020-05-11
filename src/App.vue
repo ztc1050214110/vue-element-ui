@@ -36,9 +36,13 @@ export default {
 </script>
 
 <style>
-
+    @font-face{
+        font-family:alicdn;
+        src:url("https://g.alicdn.com/TSG/damo-static/2019.918.162009/damo/css/font/iozzkhwu.ttf")
+    }
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  /* font-family: "Avenir", Helvetica, Arial, sans-serif; */
+   font-family:alicdn;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* text-align: center; */
@@ -46,6 +50,9 @@ export default {
   /* min-width: 500px;
   min-height: 750px; */
   min-width: 480px;
+
+
+
 }
 
 </style>
